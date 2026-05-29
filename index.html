@@ -34,7 +34,6 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-primary selection:text-white">
 
-    <!-- Top Bar -->
     <div class="bg-secondary text-white/80 text-xs py-2 hidden md:block">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <div class="flex gap-4">
@@ -51,11 +50,9 @@
         </div>
     </div>
 
-    <!-- Glassmorphism Navigation -->
     <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <!-- Logo -->
                 <div class="flex items-center gap-2 md:gap-3 cursor-pointer">
                     <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary to-secondary text-white rounded-xl flex items-center justify-center shadow-lg shrink-0">
                         <i class="fas fa-notes-medical text-xl md:text-2xl"></i>
@@ -66,14 +63,11 @@
                     </div>
                 </div>
 
-                <!-- Menu Controls (Button remains visible on mobile now) -->
                 <div class="flex items-center gap-3">
-                    <!-- LANGUAGE TOGGLE BUTTON (Visible everywhere) -->
                     <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-100 hover:bg-slate-200 text-secondary px-3 py-1.5 md:px-4 md:py-1.5 rounded-md text-xs md:text-sm font-bold border border-slate-200 transition-colors shadow-sm flex items-center gap-1.5">
                         <i class="fas fa-language text-primary text-sm md:text-base"></i> <span>తెలుగు</span>
                     </button>
 
-                    <!-- Desktop Menu Links (Hidden on mobile) -->
                     <div class="hidden md:flex items-center space-x-6 ml-2">
                         <a href="#home" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-home">Home</a>
                         <a href="#team" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-team">Our Team</a>
@@ -87,7 +81,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header id="home" class="relative h-[550px] md:h-[600px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://images.pexels.com/photos/3376790/pexels-photo-3376790.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hospital Operating Room" class="w-full h-full object-cover object-center" />
@@ -118,7 +111,6 @@
         </div>
     </header>
 
-    <!-- Stats Banner -->
     <div class="bg-white border-b border-slate-200 relative z-20 -mt-8 mx-4 sm:mx-8 md:mx-auto max-w-5xl rounded-xl shadow-lg">
         <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 py-4 md:grid-cols-4 md:py-6">
             <div class="text-center p-3 md:p-4">
@@ -140,7 +132,6 @@
         </div>
     </div>
 
-    <!-- Our Specialist Team Section -->
     <section id="team" class="py-16 md:py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 max-w-2xl mx-auto">
@@ -148,7 +139,6 @@
                 <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4" data-i18n="team-title">Meet Our Experts</h2>
             </div>
 
-            <!-- OWNER / MAIN DOCTOR SPOTLIGHT -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col md:flex-row mb-16">
                 <div class="md:w-2/5 relative">
                     <img src="pic.jpeg" alt="Dr. A. Vishnu Vardhan" class="w-full h-full object-cover min-h-[350px] md:min-h-[400px]">
@@ -194,14 +184,12 @@
                 </div>
             </div>
 
-            <!-- OTHER SPECIALISTS -->
             <div class="text-center mb-10">
                 <h3 class="text-xl md:text-2xl font-bold text-dark" data-i18n="visiting-title">Our Esteemed Visiting Specialists</h3>
                 <div class="w-20 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                <!-- Dr. Pavan K. Yadav -->
                 <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden group flex flex-col sm:flex-row">
                     <div class="sm:w-2/5 h-48 sm:h-auto bg-slate-100 relative overflow-hidden shrink-0 flex items-center justify-center py-6 sm:py-0">
                         <i class="fas fa-user-md text-6xl text-slate-300 group-hover:text-primary group-hover:scale-110 transition-all duration-500"></i>
@@ -221,7 +209,6 @@
                     </div>
                 </div>
 
-                <!-- Dr. Gudipudi Rajesh -->
                 <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden group flex flex-col sm:flex-row">
                     <div class="sm:w-2/5 h-48 sm:h-auto bg-slate-100 relative overflow-hidden shrink-0 flex items-center justify-center py-6 sm:py-0">
                         <i class="fas fa-user-md text-6xl text-slate-300 group-hover:text-primary group-hover:scale-110 transition-all duration-500"></i>
@@ -245,7 +232,6 @@
         </div>
     </section>
 
-    <!-- Services / Specialities Section -->
     <section id="services" class="py-16 md:py-24 bg-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
         <div class="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
@@ -257,7 +243,6 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1 -->
                 <div class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-300">
                     <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
                         <i class="fas fa-laptop-medical text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
@@ -266,7 +251,6 @@
                     <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4" data-i18n="srv1-desc">Minimally invasive keyhole surgeries, advanced laser treatments, and general procedures.</p>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-300">
                     <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
                         <i class="fas fa-bone text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
@@ -275,7 +259,6 @@
                     <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4" data-i18n="srv2-desc">Expert treatment for bone fractures, joint problems, nerve injuries, and key-hole surgeries.</p>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-300">
                     <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
                         <i class="fas fa-ear-listen text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
@@ -284,7 +267,6 @@
                     <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4" data-i18n="srv3-desc">Specialized diagnostic and surgical care for hearing, sinus, nasal, and throat-related ailments.</p>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-300">
                     <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
                         <i class="fas fa-venus text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
@@ -296,12 +278,10 @@
         </div>
     </section>
 
-    <!-- Interactive Appointment & Contact Section -->
     <section id="contact" class="py-16 md:py-24 bg-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-secondary/40 rounded-3xl border border-white/10 overflow-hidden backdrop-blur-sm">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
-                    <!-- Info Side -->
                     <div class="p-8 lg:p-16 flex flex-col justify-between">
                         <div>
                             <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block" data-i18n="contact-sub">Reach Out</span>
@@ -331,35 +311,34 @@
                         </div>
                     </div>
                     
-                    <!-- Form Side -->
                     <div class="bg-white p-8 lg:p-16 text-dark">
                         <h3 class="text-xl md:text-2xl font-bold mb-8" data-i18n="form-title">Book an Appointment</h3>
-                        <form class="space-y-5">
+                        <form class="space-y-5" id="bookingForm">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div>
                                     <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1" data-i18n="form-name">Full Name</label>
-                                    <input type="text" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-sm" placeholder="...">
+                                    <input type="text" id="patientName" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-sm" placeholder="..." required>
                                 </div>
                                 <div>
                                     <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1" data-i18n="form-phone">Phone Number</label>
-                                    <input type="tel" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-sm" placeholder="+91 XXXXX XXXXX">
+                                    <input type="tel" id="patientPhone" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-sm" placeholder="+91 XXXXX XXXXX" required>
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1" data-i18n="form-dept">Department Needed</label>
-                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-slate-700 text-sm">
-                                    <option data-i18n="opt-select">Select Department</option>
-                                    <option data-i18n="srv1-title">General & Laparoscopic</option>
-                                    <option data-i18n="srv2-title">Orthopedics</option>
-                                    <option data-i18n="srv3-title">ENT</option>
-                                    <option data-i18n="srv4-title">Gynecology & Obstetrics</option>
+                                <select id="patientDept" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-slate-700 text-sm">
+                                    <option value="" data-i18n="opt-select">Select Department</option>
+                                    <option value="General & Laparoscopic" data-i18n="srv1-title">General & Laparoscopic</option>
+                                    <option value="Orthopedics" data-i18n="srv2-title">Orthopedics</option>
+                                    <option value="ENT" data-i18n="srv3-title">ENT</option>
+                                    <option value="Gynecology & Obstetrics" data-i18n="srv4-title">Gynecology & Obstetrics</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1" data-i18n="form-desc">Briefly describe your symptoms</label>
-                                <textarea rows="3" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none text-sm"></textarea>
+                                <textarea id="patientSymptoms" rows="3" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none text-sm"></textarea>
                             </div>
-                            <button type="button" class="w-full bg-primary text-white font-bold py-3.5 px-6 rounded-lg hover:bg-secondary transition-colors duration-300 shadow-lg mt-4 text-sm md:text-base" data-i18n="form-btn">
+                            <button type="button" onclick="sendToWhatsApp()" class="w-full bg-primary text-white font-bold py-3.5 px-6 rounded-lg hover:bg-secondary transition-colors duration-300 shadow-lg mt-4 text-sm md:text-base" data-i18n="form-btn">
                                 Confirm Booking Request
                             </button>
                         </form>
@@ -369,7 +348,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-[#0b1120] text-slate-400 py-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-white/10 pb-8 mb-8">
@@ -405,7 +383,6 @@
         </div>
     </footer>
 
-    <!-- LANGUAGE TRANSLATION SCRIPT -->
     <script>
         let currentLang = 'en';
         
@@ -546,7 +523,7 @@
                 'foot-links': 'క్విక్ లింక్స్',
                 'foot-emer': 'అత్యవసర సేవలు',
                 'foot-247': '24/7 అందుబాటులో ఉంటాయి',
-                'foot-rights': 'サーవ హక్కులు ప్రత్యేకించబడినవి.',
+                'foot-rights': 'సర్వ హక్కులు ప్రత్యేకించబడినవి.',
                 'foot-place': 'హుజూర్ నగర్, తెలంగాణ.',
                 'btn-lang': '<i class="fas fa-language text-primary"></i> <span>English</span>'
             }
@@ -563,6 +540,39 @@
                     el.innerHTML = translations[currentLang][key];
                 }
             });
+        }
+
+        function sendToWhatsApp() {
+            // 1. Get values from the form
+            const name = document.getElementById('patientName').value.trim();
+            const phone = document.getElementById('patientPhone').value.trim();
+            const dept = document.getElementById('patientDept').value;
+            const symptoms = document.getElementById('patientSymptoms').value.trim();
+
+            // 2. Validate that Name and Phone are entered
+            if (name === "" || phone === "") {
+                // Show error message in Telugu if Telugu is selected, otherwise English
+                if (currentLang === 'te') {
+                    alert("దయచేసి మీ పూర్తి పేరు మరియు ఫోన్ నంబర్‌ను నమోదు చేయండి.");
+                } else {
+                    alert("Please enter your Full Name and Phone Number.");
+                }
+                return; // Stop the script here if fields are empty
+            }
+
+            // 3. Format the message for WhatsApp
+            const message = `*New Appointment Request 🏥*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Department:* ${dept ? dept : "Not selected"}\n*Symptoms:* ${symptoms ? symptoms : "None provided"}`;
+
+            // 4. Create the WhatsApp URL with the hospital's number
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappNumber = "919000649818"; // 91 + your number
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // 5. Open WhatsApp in a new tab/app
+            window.open(whatsappURL, '_blank');
+            
+            // 6. Optional: Clear the form after sending
+            document.getElementById('bookingForm').reset();
         }
     </script>
 </body>
