@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Hospital | General, Laparoscopic & Laser</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Inter', 'Noto Sans Telugu', 'sans-serif'] 
+                    },
+                    colors: { primary: '#0ea5e9', secondary: '#1e3a8a', dark: '#0f172a' }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Top Bar -->
+    <div class="bg-secondary text-white/80 text-xs py-2 hidden md:block">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex gap-4">
+                <span><i class="fas fa-map-marker-alt text-primary mr-1"></i> <span data-i18n="top-address">Opp. Sai Baba Theater, Huzurnagar - 508204</span></span>
+                <span><i class="fas fa-phone text-primary mr-1"></i> +91 90006 49818</span>
+            </div>
+            <div class="flex gap-4 items-center">
+                <span><i class="fas fa-clock text-primary mr-1"></i> <span data-i18n="top-emergency">24/7 Emergency Services</span></span>
+                <div class="flex gap-3 text-white border-l border-white/20 pl-4">
+                    <a href="#" class="hover:text-primary transition"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-primary transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Glassmorphism Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary text-white rounded-xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-notes-medical text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl text-dark leading-tight tracking-tight" data-i18n="logo-title">Vishnu Hospital</h1>
+                        <h2 class="font-medium text-[11px] text-primary uppercase tracking-wider" data-i18n="logo-sub">General, Laparoscopic & Laser</h2>
+                    </div>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-home">Home</a>
+                    <a href="#team" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-team">Our Team</a>
+                    <a href="#services" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-services">Specialities</a>
+                    
+                    <!-- LANGUAGE TOGGLE BUTTON -->
+                    <button onclick="toggleLanguage()" id="langBtn" class="ml-2 bg-slate-100 hover:bg-slate-200 text-secondary px-4 py-1.5 rounded-md text-sm font-bold border border-slate-200 transition-colors shadow-sm flex items-center gap-2">
+                        <i class="fas fa-language text-primary"></i> <span>తెలుగు</span>
+                    </button>
+
+                    <a href="#contact" class="bg-primary hover:bg-sky-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-0.5" data-i18n="nav-book">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/3376790/pexels-photo-3376790.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hospital Operating Room" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-6 fade-in-up">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    <span data-i18n="hero-tag">Multi-Specialty Care in Huzurnagar</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 fade-in-up delay-100" data-i18n="hero-title">
+                    Expert Care.<br>Advanced Healing.
+                </h1>
+                <p class="text-lg text-slate-200 mb-8 max-w-lg leading-relaxed fade-in-up delay-200" data-i18n="hero-desc">
+                    Comprehensive healthcare combining General Surgery, Orthopedics, ENT, and Gynecology specialities under one roof with state-of-the-art facilities.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 fade-in-up delay-200">
+                    <a href="#contact" class="bg-primary text-white px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-sky-600 transition-all shadow-lg flex items-center justify-center gap-2">
+                        <span data-i18n="hero-btn1">Consult Our Specialists</span> <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="tel:9000649818" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-white hover:text-secondary transition-all flex items-center justify-center gap-2">
+                        <i class="fas fa-phone-alt"></i> <span data-i18n="hero-btn2">Call: 90006 49818</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Banner -->
+    <div class="bg-white border-b border-slate-200 relative z-20 -mt-8 mx-4 sm:mx-8 md:mx-auto max-w-5xl rounded-xl shadow-lg">
+        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 py-6">
+            <div class="text-center p-4">
+                <div class="text-3xl font-bold text-primary mb-1">4+</div>
+                <div class="text-sm text-slate-500 font-medium" data-i18n="stat-1">Core Departments</div>
+            </div>
+            <div class="text-center p-4">
+                <div class="text-3xl font-bold text-primary mb-1">24/7</div>
+                <div class="text-sm text-slate-500 font-medium" data-i18n="stat-2">Emergency Care</div>
+            </div>
+            <div class="text-center p-4">
+                <div class="text-3xl font-bold text-primary mb-1"><i class="fas fa-microscope text-2xl"></i></div>
+                <div class="text-sm text-slate-500 font-medium" data-i18n="stat-3">Advanced Laser & Laparoscopy</div>
+            </div>
+            <div class="text-center p-4">
+                <div class="text-3xl font-bold text-primary mb-1">100%</div>
+                <div class="text-sm text-slate-500 font-medium" data-i18n="stat-4">Patient Focus</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Specialist Team Section -->
+    <section id="team" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 max-w-2xl mx-auto">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block" data-i18n="team-sub">Our Medical Team</span>
+                <h2 class="text-4xl font-extrabold text-dark mb-4" data-i18n="team-title">Meet Our Experts</h2>
+            </div>
+
+            <!-- OWNER / MAIN DOCTOR SPOTLIGHT -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col md:flex-row mb-16">
+                <div class="md:w-2/5 relative">
+                    <!-- USING LOCAL DESKTOP IMAGE HERE -->
+                    <img src="pic.jpeg" alt="Dr. A. Vishnu Vardhan" class="w-full h-full object-cover min-h-[400px]">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/90 to-transparent h-32 hidden md:block"></div>
+                </div>
+                
+                <!-- REDUCED TOP GAP (justify-start and pt-8) -->
+                <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-start bg-white relative pt-8 md:pt-10">
+                    <div class="inline-block bg-blue-50 text-primary font-bold tracking-wider uppercase text-xs px-4 py-1.5 rounded-full mb-4 w-max border border-blue-100">
+                        <i class="fas fa-star mr-1"></i> <span data-i18n="doc1-tag">Founder & Managing Director</span>
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-dark mb-2" data-i18n="doc1-name">Dr. A. Vishnu Vardhan</h3>
+                    <p class="text-primary font-semibold text-lg mb-4" data-i18n="doc1-role">General & Laparoscopic Surgeon</p>
+                    
+                    <div class="flex flex-wrap items-center gap-3 mb-6">
+                        <span class="text-sm font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-full">MBBS, DNB, FIAGES</span>
+                        <span class="text-sm text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full border border-slate-100">Reg. No. 79748</span>
+                    </div>
+                    
+                    <p class="text-slate-600 mb-8 leading-relaxed text-lg" data-i18n="doc1-desc">
+                        As the founder and chief surgeon of Vishnu Hospital, Dr. Vishnu Vardhan is committed to bringing world-class, advanced surgical care to the people of Huzurnagar. With his extensive expertise in minimally invasive techniques, he ensures the highest standard of patient safety, comfort, and rapid recovery.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fas fa-check text-green-600 text-sm"></i>
+                            </div>
+                            <span class="font-medium text-slate-700" data-i18n="doc1-point1">Advanced Laparoscopic Surgery</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fas fa-check text-green-600 text-sm"></i>
+                            </div>
+                            <span class="font-medium text-slate-700" data-i18n="doc1-point2">Precision Laser Procedures</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fas fa-check text-green-600 text-sm"></i>
+                            </div>
+                            <span class="font-medium text-slate-700" data-i18n="doc1-point3">Comprehensive General Surgery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTHER SPECIALISTS -->
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-dark" data-i18n="visiting-title">Our Esteemed Visiting Specialists</h3>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Dr. Pavan K. Yadav -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden group flex flex-col sm:flex-row">
+                    <!-- EMPTY ICON PLACEHOLDER -->
+                    <div class="sm:w-2/5 h-64 sm:h-auto bg-slate-100 relative overflow-hidden shrink-0 flex items-center justify-center">
+                        <i class="fas fa-user-md text-7xl text-slate-300 group-hover:text-primary group-hover:scale-110 transition-all duration-500"></i>
+                    </div>
+                    <div class="p-6 sm:w-3/5 flex flex-col justify-center">
+                        <h3 class="text-xl font-bold text-dark mb-1" data-i18n="doc2-name">Dr. Pavan K. Yadav</h3>
+                        <p class="text-primary font-medium text-sm mb-3" data-i18n="doc2-role">Orthopedic Specialist</p>
+                        
+                        <div class="inline-block text-xs font-bold text-slate-700 bg-slate-100 px-2 py-1 rounded-md mb-4 w-max">
+                            D.Ortho., DNB. Ortho
+                        </div>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc2-p1">Bone & Joint Specialist</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc2-p2">Key-Hole Surgery Expert</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc2-p3">Ex. Senior Resident, BIRRD (Tirupati)</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dr. Gudipudi Rajesh -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden group flex flex-col sm:flex-row">
+                    <!-- EMPTY ICON PLACEHOLDER -->
+                    <div class="sm:w-2/5 h-64 sm:h-auto bg-slate-100 relative overflow-hidden shrink-0 flex items-center justify-center">
+                        <i class="fas fa-user-md text-7xl text-slate-300 group-hover:text-primary group-hover:scale-110 transition-all duration-500"></i>
+                    </div>
+                    <div class="p-6 sm:w-3/5 flex flex-col justify-center">
+                        <h3 class="text-xl font-bold text-dark mb-1" data-i18n="doc3-name">Dr. Gudipudi Rajesh</h3>
+                        <p class="text-primary font-medium text-sm mb-3" data-i18n="doc3-role">ENT Specialist</p>
+                        
+                        <div class="inline-block text-xs font-bold text-slate-700 bg-slate-100 px-2 py-1 rounded-md mb-4 w-max">
+                            D.N.B OTO Rhino Laryngology
+                        </div>
+                        <ul class="space-y-2 text-slate-600 text-sm mb-4">
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc3-p1">Ear, Nose, Throat Specialist</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc3-p2">Sinus & Nasal Disorders</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc3-p3">Laryngeal Procedures</span></li>
+                        </ul>
+                        <div class="text-xs text-slate-400 font-medium">Reg No: 66325</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Specialities Section -->
+    <section id="services" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block" data-i18n="dept-sub">Departments</span>
+                <h2 class="text-4xl font-extrabold text-dark mb-4" data-i18n="dept-title">Centers of Excellence</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-laptop-medical text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-dark mb-3" data-i18n="srv1-title">General & Laparoscopic</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-i18n="srv1-desc">Minimally invasive keyhole surgeries, advanced laser treatments, and general procedures.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-bone text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-dark mb-3" data-i18n="srv2-title">Orthopedics</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-i18n="srv2-desc">Expert treatment for bone fractures, joint problems, nerve injuries, and key-hole surgeries.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-ear-listen text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-dark mb-3" data-i18n="srv3-title">ENT (Ear, Nose, Throat)</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-i18n="srv3-desc">Specialized diagnostic and surgical care for hearing, sinus, nasal, and throat-related ailments.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-venus text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-dark mb-3" data-i18n="srv4-title">Gynecology</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-i18n="srv4-desc">Comprehensive women's healthcare, maternity services, and advanced gynecological treatments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Appointment & Contact Section -->
+    <section id="contact" class="py-24 bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-secondary/40 rounded-3xl border border-white/10 overflow-hidden backdrop-blur-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <!-- Info Side -->
+                    <div class="p-10 lg:p-16 flex flex-col justify-between">
+                        <div>
+                            <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block" data-i18n="contact-sub">Reach Out</span>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="contact-title">Schedule Your Visit</h2>
+                            <p class="text-slate-300 mb-10 text-lg" data-i18n="contact-desc">Don't delay your health. Book an appointment today and experience dedicated care tailored to your needs.</p>
+                            
+                            <div class="space-y-8">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                        <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-lg text-white" data-i18n="contact-loc-title">Hospital Location</h5>
+                                        <p class="text-slate-400 mt-1" data-i18n="contact-loc-val">Opp. Sai Baba Theater,<br>Huzurnagar, Telangana - 508 204</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                        <i class="fas fa-phone-alt text-primary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-lg text-white" data-i18n="contact-ph-title">Contact Number</h5>
+                                        <p class="text-slate-400 mt-1">+91 90006 49818</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Side -->
+                    <div class="bg-white p-10 lg:p-16 text-dark">
+                        <h3 class="text-2xl font-bold mb-8" data-i18n="form-title">Book an Appointment</h3>
+                        <form class="space-y-5">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-1" data-i18n="form-name">Full Name</label>
+                                    <input type="text" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="...">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-1" data-i18n="form-phone">Phone Number</label>
+                                    <input type="tel" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="+91 XXXXX XXXXX">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1" data-i18n="form-dept">Department Needed</label>
+                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-slate-700">
+                                    <option data-i18n="opt-select">Select Department</option>
+                                    <option data-i18n="srv1-title">General & Laparoscopic</option>
+                                    <option data-i18n="srv2-title">Orthopedics</option>
+                                    <option data-i18n="srv3-title">ENT</option>
+                                    <option data-i18n="srv4-title">Gynecology & Obstetrics</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1" data-i18n="form-desc">Briefly describe your symptoms</label>
+                                <textarea rows="3" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none"></textarea>
+                            </div>
+                            <button type="button" class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-secondary transition-colors duration-300 shadow-lg mt-4" data-i18n="form-btn">
+                                Confirm Booking Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] text-slate-400 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-white/10 pb-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fas fa-notes-medical text-primary text-2xl"></i>
+                        <span class="font-bold text-xl text-white" data-i18n="logo-title">Vishnu Hospital</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-4" data-i18n="foot-desc">Providing advanced healthcare, general surgery, orthopedics, ENT, and gynecology services to the Huzurnagar community with a commitment to excellence.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="foot-links">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-primary transition" data-i18n="nav-home">Home</a></li>
+                        <li><a href="#team" class="hover:text-primary transition" data-i18n="nav-team">Our Team</a></li>
+                        <li><a href="#services" class="hover:text-primary transition" data-i18n="nav-services">Departments</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition" data-i18n="nav-contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="contact-ph-title">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2 border-b border-white/10 pb-2"><i class="fas fa-map-marker-alt text-primary mt-1"></i> <span data-i18n="contact-loc-val">Opp. Sai Baba Theater,<br>Huzurnagar - 508 204</span></li>
+                        <li class="flex items-center gap-2 border-b border-white/10 py-2"><i class="fas fa-phone-alt text-primary"></i> <span>Cell: 90006 49818</span></li>
+                        <li class="flex justify-between text-primary font-semibold pt-1"><span data-i18n="foot-emer">Emergencies</span> <span data-i18n="foot-247">24 / 7 Available</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 <span data-i18n="logo-title">Vishnu Hospital</span>. <span data-i18n="foot-rights">All rights reserved.</span></p>
+                <p data-i18n="foot-place">Huzurnagar, Telangana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LANGUAGE TRANSLATION SCRIPT -->
+    <script>
+        let currentLang = 'en';
+        
+        const translations = {
+            'en': {
+                'top-address': 'Opp. Sai Baba Theater, Huzurnagar - 508204',
+                'top-emergency': '24/7 Emergency Services',
+                'logo-title': 'Vishnu Hospital',
+                'logo-sub': 'General, Laparoscopic & Laser',
+                'nav-home': 'Home',
+                'nav-team': 'Our Team',
+                'nav-services': 'Specialities',
+                'nav-contact': 'Contact Us',
+                'nav-book': 'Book Appointment',
+                'hero-tag': 'Multi-Specialty Care in Huzurnagar',
+                'hero-title': 'Expert Care.<br>Advanced Healing.',
+                'hero-desc': 'Comprehensive healthcare combining General Surgery, Orthopedics, ENT, and Gynecology specialities under one roof with state-of-the-art facilities.',
+                'hero-btn1': 'Consult Our Specialists',
+                'hero-btn2': 'Call: 90006 49818',
+                'stat-1': 'Core Departments',
+                'stat-2': 'Emergency Care',
+                'stat-3': 'Advanced Laser & Laparoscopy',
+                'stat-4': 'Patient Focus',
+                'team-sub': 'Our Medical Team',
+                'team-title': 'Meet Our Experts',
+                'doc1-tag': 'Founder & Managing Director',
+                'doc1-name': 'Dr. A. Vishnu Vardhan',
+                'doc1-role': 'General & Laparoscopic Surgeon',
+                'doc1-desc': 'As the founder and chief surgeon of Vishnu Hospital, Dr. Vishnu Vardhan is committed to bringing world-class, advanced surgical care to the people of Huzurnagar. With his extensive expertise in minimally invasive techniques, he ensures the highest standard of patient safety, comfort, and rapid recovery.',
+                'doc1-point1': 'Advanced Laparoscopic Surgery',
+                'doc1-point2': 'Precision Laser Procedures',
+                'doc1-point3': 'Comprehensive General Surgery',
+                'visiting-title': 'Our Esteemed Visiting Specialists',
+                'doc2-name': 'Dr. Pavan K. Yadav',
+                'doc2-role': 'Orthopedic Specialist',
+                'doc2-p1': 'Bone & Joint Specialist',
+                'doc2-p2': 'Key-Hole Surgery Expert',
+                'doc2-p3': 'Ex. Senior Resident, BIRRD (Tirupati)',
+                'doc3-name': 'Dr. Gudipudi Rajesh',
+                'doc3-role': 'ENT Specialist',
+                'doc3-p1': 'Ear, Nose, Throat Specialist',
+                'doc3-p2': 'Sinus & Nasal Disorders',
+                'doc3-p3': 'Laryngeal Procedures',
+                'dept-sub': 'Departments',
+                'dept-title': 'Centers of Excellence',
+                'srv1-title': 'General & Laparoscopic',
+                'srv1-desc': 'Minimally invasive keyhole surgeries, advanced laser treatments, and general procedures.',
+                'srv2-title': 'Orthopedics',
+                'srv2-desc': 'Expert treatment for bone fractures, joint problems, nerve injuries, and key-hole surgeries.',
+                'srv3-title': 'ENT (Ear, Nose, Throat)',
+                'srv3-desc': 'Specialized diagnostic and surgical care for hearing, sinus, nasal, and throat-related ailments.',
+                'srv4-title': 'Gynecology & Obstetrics',
+                'srv4-desc': 'Comprehensive women\'s healthcare, maternity services, and advanced gynecological treatments.',
+                'contact-sub': 'Reach Out',
+                'contact-title': 'Schedule Your Visit',
+                'contact-desc': 'Don\'t delay your health. Book an appointment today and experience dedicated care tailored to your needs.',
+                'contact-loc-title': 'Hospital Location',
+                'contact-loc-val': 'Opp. Sai Baba Theater,<br>Huzurnagar, Telangana - 508 204',
+                'contact-ph-title': 'Contact Info',
+                'form-title': 'Book an Appointment',
+                'form-name': 'Full Name',
+                'form-phone': 'Phone Number',
+                'form-dept': 'Department Needed',
+                'opt-select': 'Select Department',
+                'form-desc': 'Briefly describe your symptoms',
+                'form-btn': 'Confirm Booking Request',
+                'foot-desc': 'Providing advanced healthcare, general surgery, orthopedics, ENT, and gynecology services to the Huzurnagar community with a commitment to excellence.',
+                'foot-links': 'Quick Links',
+                'foot-emer': 'Emergencies',
+                'foot-247': '24 / 7 Available',
+                'foot-rights': 'All rights reserved.',
+                'foot-place': 'Huzurnagar, Telangana.',
+                'btn-lang': '<i class="fas fa-language text-primary"></i> <span>తెలుగు</span>'
+            },
+            'te': {
+                'top-address': 'సాయి బాబా థియేటర్ ఎదురుగా, హుజూర్ నగర్ - 508204',
+                'top-emergency': '24/7 అత్యవసర సేవలు',
+                'logo-title': 'విష్ణు హాస్పిటల్',
+                'logo-sub': 'జనరల్, లాప్రోస్కోపిక్ & లేజర్',
+                'nav-home': 'హోమ్',
+                'nav-team': 'మా వైద్యులు',
+                'nav-services': 'ప్రత్యేకతలు',
+                'nav-contact': 'సంప్రదించండి',
+                'nav-book': 'అపాయింట్‌మెంట్ బుక్ చేయండి',
+                'hero-tag': 'హుజూర్ నగర్ లో మల్టీ-స్పెషాలిటీ కేర్',
+                'hero-title': 'నిపుణుల సంరక్షణ.<br>అధునాతన వైద్యం.',
+                'hero-desc': 'జనరల్ సర్జరీ, ఆర్థోపెడిక్స్, ENT మరియు గైనకాలజీ ప్రత్యేకతలతో ఒకే చోట అత్యుత్తమ వైద్య సేవలు.',
+                'hero-btn1': 'మా నిపుణులను సంప్రదించండి',
+                'hero-btn2': 'కాల్: 90006 49818',
+                'stat-1': 'ప్రధాన విభాగాలు',
+                'stat-2': 'అత్యవసర సేవలు',
+                'stat-3': 'అధునాతన లేజర్ & లాప్రోస్కోపీ',
+                'stat-4': 'రోగుల పట్ల శ్రద్ధ',
+                'team-sub': 'మా వైద్య బృందం',
+                'team-title': 'మా నిపుణులను కలవండి',
+                'doc1-tag': 'వ్యవస్థాపకులు & మేనేజింగ్ డైరెక్టర్',
+                'doc1-name': 'డా॥ A. విష్ణువర్ధన్',
+                'doc1-role': 'జనరల్ & లాప్రోస్కోపిక్ సర్జన్',
+                'doc1-desc': 'విష్ణు హాస్పిటల్ వ్యవస్థాపకులుగా, డాక్టర్ విష్ణు వర్ధన్ హుజూర్ నగర్ ప్రజలకు అత్యుత్తమ అధునాతన శస్త్రచికిత్సను అందించడానికి కట్టుబడి ఉన్నారు. కనిష్ట కోత (కీహోల్) విధానాలలో ఆయనకున్న అపారమైన అనుభవంతో, రోగులు వేగంగా కోలుకునేలా అత్యుత్తమ వైద్యం అందిస్తారు.',
+                'doc1-point1': 'అధునాతన లాప్రోస్కోపిక్ సర్జరీ',
+                'doc1-point2': 'కచ్చితమైన లేజర్ విధానాలు',
+                'doc1-point3': 'సమగ్ర జనరల్ సర్జరీ',
+                'visiting-title': 'మా గౌరవనీయమైన విజిటింగ్ నిపుణులు',
+                'doc2-name': 'డా॥ పవన్ K. యాదవ్',
+                'doc2-role': 'ఆర్థోపెడిక్ (ఎముకల) నిపుణులు',
+                'doc2-p1': 'ఎముకలు మరియు కీళ్ల నిపుణులు',
+                'doc2-p2': 'కీ-హోల్ సర్జరీ నిపుణులు',
+                'doc2-p3': 'మాజీ సీనియర్ రెసిడెంట్, బర్డ్ (తిరుపతి)',
+                'doc3-name': 'డా॥ గుడిపూడి రాజేష్',
+                'doc3-role': 'ENT నిపుణులు',
+                'doc3-p1': 'చెవి, ముక్కు, గొంతు నిపుణులు',
+                'doc3-p2': 'సైనస్ & నాసికా సమస్యలు',
+                'doc3-p3': 'స్వరపేటిక విధానాలు',
+                'dept-sub': 'విభాగాలు',
+                'dept-title': 'సెంటర్స్ ఆఫ్ ఎక్సలెన్స్',
+                'srv1-title': 'జనరల్ & లాప్రోస్కోపిక్',
+                'srv1-desc': 'కనిష్ట కోతతో కీహోల్ సర్జరీలు, అధునాతన లేజర్ చికిత్సలు మరియు జనరల్ విధానాలు.',
+                'srv2-title': 'ఆర్థోపెడిక్స్',
+                'srv2-desc': 'ఎముకల పగుళ్లు, కీళ్ల సమస్యలు మరియు నరాల గాయాలకు నిపుణుల చికిత్స.',
+                'srv3-title': 'ENT (చెవి, ముక్కు, గొంతు)',
+                'srv3-desc': 'వినడం, సైనస్, నాసికా మరియు గొంతు సంబంధిత వ్యాధులకు ప్రత్యేక చికిత్స.',
+                'srv4-title': 'గైనకాలజీ (మహిళా వైద్యం)',
+                'srv4-desc': 'సమగ్ర మహిళా ఆరోగ్య సంరక్షణ, ప్రసూతి సేవలు మరియు అధునాతన గైనకాలజికల్ చికిత్సలు.',
+                'contact-sub': 'మమ్మల్ని సంప్రదించండి',
+                'contact-title': 'మీ అపాయింట్‌మెంట్ బుక్ చేసుకోండి',
+                'contact-desc': 'మీ ఆరోగ్యాన్ని నిర్లక్ష్యం చేయవద్దు. ఈరోజే అపాయింట్‌మెంట్ బుక్ చేసుకోండి మరియు మెరుగైన సంరక్షణ పొందండి.',
+                'contact-loc-title': 'ఆసుపత్రి చిరునామా',
+                'contact-loc-val': 'సాయి బాబా థియేటర్ ఎదురుగా,<br>హుజూర్ నగర్, తెలంగాణ - 508 204',
+                'contact-ph-title': 'సంప్రదించవలసిన నంబర్',
+                'form-title': 'అపాయింట్‌మెంట్ బుక్ చేయండి',
+                'form-name': 'పూర్తి పేరు',
+                'form-phone': 'ఫోన్ నంబర్',
+                'form-dept': 'అవసరమైన విభాగం',
+                'opt-select': 'విభాగాన్ని ఎంచుకోండి',
+                'form-desc': 'మీ లక్షణాలను క్లుప్తంగా వివరించండి',
+                'form-btn': 'బుకింగ్ నిర్ధారించండి',
+                'foot-desc': 'హుజూర్ నగర్ ప్రజలకు జనరల్ సర్జరీ, ఆర్థోపెడిక్స్, ENT మరియు గైనకాలజీ సేవలను అందిస్తున్న అత్యుత్తమ ఆసుపత్రి.',
+                'foot-links': 'క్విక్ లింక్స్',
+                'foot-emer': 'అత్యవసర సేవలు',
+                'foot-247': '24/7 అందుబాటులో ఉంటాయి',
+                'foot-rights': 'సర్వ హక్కులు ప్రత్యేకించబడినవి.',
+                'foot-place': 'హుజూర్ నగర్, తెలంగాణ.',
+                'btn-lang': '<i class="fas fa-language text-primary"></i> <span>English</span>'
+            }
+        };
+
+        function toggleLanguage() {
+            // Swap Language
+            currentLang = currentLang === 'en' ? 'te' : 'en';
+            
+            // Update button text
+            document.getElementById('langBtn').innerHTML = translations[currentLang]['btn-lang'];
+            
+            // Update all elements with data-i18n attribute
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+        }
+    </script>
+</body>
+</html>
