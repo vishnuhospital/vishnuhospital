@@ -56,36 +56,39 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <div class="flex items-center gap-3 cursor-pointer">
-                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary text-white rounded-xl flex items-center justify-center shadow-lg">
-                        <i class="fas fa-notes-medical text-2xl"></i>
+                <div class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary to-secondary text-white rounded-xl flex items-center justify-center shadow-lg shrink-0">
+                        <i class="fas fa-notes-medical text-xl md:text-2xl"></i>
                     </div>
                     <div>
-                        <h1 class="font-bold text-xl text-dark leading-tight tracking-tight" data-i18n="logo-title">Vishnu Hospital</h1>
-                        <h2 class="font-medium text-[11px] text-primary uppercase tracking-wider" data-i18n="logo-sub">General, Laparoscopic & Laser</h2>
+                        <h1 class="font-bold text-base md:text-xl text-dark leading-tight tracking-tight" data-i18n="logo-title">Vishnu Hospital</h1>
+                        <h2 class="font-medium text-[9px] md:text-[11px] text-primary uppercase tracking-wider leading-none mt-0.5" data-i18n="logo-sub">General, Laparoscopic & Laser</h2>
                     </div>
                 </div>
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="#home" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-home">Home</a>
-                    <a href="#team" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-team">Our Team</a>
-                    <a href="#services" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-services">Specialities</a>
-                    
-                    <!-- LANGUAGE TOGGLE BUTTON -->
-                    <button onclick="toggleLanguage()" id="langBtn" class="ml-2 bg-slate-100 hover:bg-slate-200 text-secondary px-4 py-1.5 rounded-md text-sm font-bold border border-slate-200 transition-colors shadow-sm flex items-center gap-2">
-                        <i class="fas fa-language text-primary"></i> <span>తెలుగు</span>
+
+                <!-- Menu Controls (Button remains visible on mobile now) -->
+                <div class="flex items-center gap-3">
+                    <!-- LANGUAGE TOGGLE BUTTON (Visible everywhere) -->
+                    <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-100 hover:bg-slate-200 text-secondary px-3 py-1.5 md:px-4 md:py-1.5 rounded-md text-xs md:text-sm font-bold border border-slate-200 transition-colors shadow-sm flex items-center gap-1.5">
+                        <i class="fas fa-language text-primary text-sm md:text-base"></i> <span>తెలుగు</span>
                     </button>
 
-                    <a href="#contact" class="bg-primary hover:bg-sky-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-0.5" data-i18n="nav-book">
-                        Book Appointment
-                    </a>
+                    <!-- Desktop Menu Links (Hidden on mobile) -->
+                    <div class="hidden md:flex items-center space-x-6 ml-2">
+                        <a href="#home" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-home">Home</a>
+                        <a href="#team" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-team">Our Team</a>
+                        <a href="#services" class="text-slate-600 hover:text-primary font-medium transition duration-200 border-b-2 border-transparent hover:border-primary pb-1" data-i18n="nav-services">Specialities</a>
+                        <a href="#contact" class="bg-primary hover:bg-sky-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-0.5" data-i18n="nav-book">
+                            Book Appointment
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <header id="home" class="relative h-[550px] md:h-[600px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://images.pexels.com/photos/3376790/pexels-photo-3376790.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hospital Operating Room" class="w-full h-full object-cover object-center" />
             <div class="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent"></div>
@@ -93,21 +96,21 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-6 fade-in-up">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs md:text-sm font-medium mb-6 fade-in-up">
                     <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
                     <span data-i18n="hero-tag">Multi-Specialty Care in Huzurnagar</span>
                 </div>
-                <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 fade-in-up delay-100" data-i18n="hero-title">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 fade-in-up delay-100" data-i18n="hero-title">
                     Expert Care.<br>Advanced Healing.
                 </h1>
-                <p class="text-lg text-slate-200 mb-8 max-w-lg leading-relaxed fade-in-up delay-200" data-i18n="hero-desc">
+                <p class="text-base md:text-lg text-slate-200 mb-8 max-w-lg leading-relaxed fade-in-up delay-200" data-i18n="hero-desc">
                     Comprehensive healthcare combining General Surgery, Orthopedics, ENT, and Gynecology specialities under one roof with state-of-the-art facilities.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 fade-in-up delay-200">
-                    <a href="#contact" class="bg-primary text-white px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-sky-600 transition-all shadow-lg flex items-center justify-center gap-2">
+                    <a href="#contact" class="bg-primary text-white px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-sky-600 transition-all shadow-lg flex items-center justify-center gap-2 text-sm md:text-base">
                         <span data-i18n="hero-btn1">Consult Our Specialists</span> <i class="fas fa-arrow-right text-sm"></i>
                     </a>
-                    <a href="tel:9000649818" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-white hover:text-secondary transition-all flex items-center justify-center gap-2">
+                    <a href="tel:9000649818" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-white hover:text-secondary transition-all flex items-center justify-center gap-2 text-sm md:text-base">
                         <i class="fas fa-phone-alt"></i> <span data-i18n="hero-btn2">Call: 90006 49818</span>
                     </a>
                 </div>
@@ -117,77 +120,75 @@
 
     <!-- Stats Banner -->
     <div class="bg-white border-b border-slate-200 relative z-20 -mt-8 mx-4 sm:mx-8 md:mx-auto max-w-5xl rounded-xl shadow-lg">
-        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 py-6">
-            <div class="text-center p-4">
-                <div class="text-3xl font-bold text-primary mb-1">4+</div>
-                <div class="text-sm text-slate-500 font-medium" data-i18n="stat-1">Core Departments</div>
+        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 py-4 md:grid-cols-4 md:py-6">
+            <div class="text-center p-3 md:p-4">
+                <div class="text-2xl md:text-3xl font-bold text-primary mb-1">4+</div>
+                <div class="text-xs md:text-sm text-slate-500 font-medium" data-i18n="stat-1">Core Departments</div>
             </div>
-            <div class="text-center p-4">
-                <div class="text-3xl font-bold text-primary mb-1">24/7</div>
-                <div class="text-sm text-slate-500 font-medium" data-i18n="stat-2">Emergency Care</div>
+            <div class="text-center p-3 md:p-4">
+                <div class="text-2xl md:text-3xl font-bold text-primary mb-1">24/7</div>
+                <div class="text-xs md:text-sm text-slate-500 font-medium" data-i18n="stat-2">Emergency Care</div>
             </div>
-            <div class="text-center p-4">
-                <div class="text-3xl font-bold text-primary mb-1"><i class="fas fa-microscope text-2xl"></i></div>
-                <div class="text-sm text-slate-500 font-medium" data-i18n="stat-3">Advanced Laser & Laparoscopy</div>
+            <div class="text-center p-3 md:p-4">
+                <div class="text-2xl md:text-3xl font-bold text-primary mb-1"><i class="fas fa-microscope text-xl md:text-2xl"></i></div>
+                <div class="text-xs md:text-sm text-slate-500 font-medium" data-i18n="stat-3">Advanced Laser & Laparoscopy</div>
             </div>
-            <div class="text-center p-4">
-                <div class="text-3xl font-bold text-primary mb-1">100%</div>
-                <div class="text-sm text-slate-500 font-medium" data-i18n="stat-4">Patient Focus</div>
+            <div class="text-center p-3 md:p-4">
+                <div class="text-2xl md:text-3xl font-bold text-primary mb-1">100%</div>
+                <div class="text-xs md:text-sm text-slate-500 font-medium" data-i18n="stat-4">Patient Focus</div>
             </div>
         </div>
     </div>
 
     <!-- Our Specialist Team Section -->
-    <section id="team" class="py-24 bg-slate-50">
+    <section id="team" class="py-16 md:py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 max-w-2xl mx-auto">
                 <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block" data-i18n="team-sub">Our Medical Team</span>
-                <h2 class="text-4xl font-extrabold text-dark mb-4" data-i18n="team-title">Meet Our Experts</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4" data-i18n="team-title">Meet Our Experts</h2>
             </div>
 
             <!-- OWNER / MAIN DOCTOR SPOTLIGHT -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col md:flex-row mb-16">
                 <div class="md:w-2/5 relative">
-                    <!-- USING LOCAL DESKTOP IMAGE HERE -->
-                    <img src="pic.jpeg" alt="Dr. A. Vishnu Vardhan" class="w-full h-full object-cover min-h-[400px]">
+                    <img src="WhatsApp Image 2026-05-29 at 12.58.18 (1).jpeg" alt="Dr. A. Vishnu Vardhan" class="w-full h-full object-cover min-h-[350px] md:min-h-[400px]">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/90 to-transparent h-32 hidden md:block"></div>
                 </div>
                 
-                <!-- REDUCED TOP GAP (justify-start and pt-8) -->
-                <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-start bg-white relative pt-8 md:pt-10">
-                    <div class="inline-block bg-blue-50 text-primary font-bold tracking-wider uppercase text-xs px-4 py-1.5 rounded-full mb-4 w-max border border-blue-100">
+                <div class="md:w-3/5 p-6 md:p-10 flex flex-col justify-start bg-white relative pt-8 md:pt-10">
+                    <div class="inline-block bg-blue-50 text-primary font-bold tracking-wider uppercase text-[10px] md:text-xs px-3 py-1 md:px-4 md:py-1.5 rounded-full mb-4 w-max border border-blue-100">
                         <i class="fas fa-star mr-1"></i> <span data-i18n="doc1-tag">Founder & Managing Director</span>
                     </div>
-                    <h3 class="text-3xl md:text-4xl font-extrabold text-dark mb-2" data-i18n="doc1-name">Dr. A. Vishnu Vardhan</h3>
-                    <p class="text-primary font-semibold text-lg mb-4" data-i18n="doc1-role">General & Laparoscopic Surgeon</p>
+                    <h3 class="text-2xl md:text-4xl font-extrabold text-dark mb-2" data-i18n="doc1-name">Dr. A. Vishnu Vardhan</h3>
+                    <p class="text-primary font-semibold text-base md:text-lg mb-4" data-i18n="doc1-role">General & Laparoscopic Surgeon</p>
                     
-                    <div class="flex flex-wrap items-center gap-3 mb-6">
-                        <span class="text-sm font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-full">MBBS, DNB, FIAGES</span>
-                        <span class="text-sm text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full border border-slate-100">Reg. No. 79748</span>
+                    <div class="flex flex-wrap items-center gap-2 mb-6">
+                        <span class="text-xs md:text-sm font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-full">MBBS, DNB, FIAGES</span>
+                        <span class="text-xs md:text-sm text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full border border-slate-100">Reg. No. 79748</span>
                     </div>
                     
-                    <p class="text-slate-600 mb-8 leading-relaxed text-lg" data-i18n="doc1-desc">
+                    <p class="text-slate-600 mb-8 leading-relaxed text-sm md:text-lg" data-i18n="doc1-desc">
                         As the founder and chief surgeon of Vishnu Hospital, Dr. Vishnu Vardhan is committed to bringing world-class, advanced surgical care to the people of Huzurnagar. With his extensive expertise in minimally invasive techniques, he ensures the highest standard of patient safety, comfort, and rapid recovery.
                     </p>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-green-600 text-sm"></i>
+                            <div class="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
                             </div>
-                            <span class="font-medium text-slate-700" data-i18n="doc1-point1">Advanced Laparoscopic Surgery</span>
+                            <span class="font-medium text-slate-700 text-sm md:text-base" data-i18n="doc1-point1">Advanced Laparoscopic Surgery</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-green-600 text-sm"></i>
+                            <div class="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
                             </div>
-                            <span class="font-medium text-slate-700" data-i18n="doc1-point2">Precision Laser Procedures</span>
+                            <span class="font-medium text-slate-700 text-sm md:text-base" data-i18n="doc1-point2">Precision Laser Procedures</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-green-600 text-sm"></i>
+                            <div class="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
                             </div>
-                            <span class="font-medium text-slate-700" data-i18n="doc1-point3">Comprehensive General Surgery</span>
+                            <span class="font-medium text-slate-700 text-sm md:text-base" data-i18n="doc1-point3">Comprehensive General Surgery</span>
                         </div>
                     </div>
                 </div>
@@ -195,51 +196,49 @@
 
             <!-- OTHER SPECIALISTS -->
             <div class="text-center mb-10">
-                <h3 class="text-2xl font-bold text-dark" data-i18n="visiting-title">Our Esteemed Visiting Specialists</h3>
-                <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                <h3 class="text-xl md:text-2xl font-bold text-dark" data-i18n="visiting-title">Our Esteemed Visiting Specialists</h3>
+                <div class="w-20 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                 <!-- Dr. Pavan K. Yadav -->
                 <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden group flex flex-col sm:flex-row">
-                    <!-- EMPTY ICON PLACEHOLDER -->
-                    <div class="sm:w-2/5 h-64 sm:h-auto bg-slate-100 relative overflow-hidden shrink-0 flex items-center justify-center">
-                        <i class="fas fa-user-md text-7xl text-slate-300 group-hover:text-primary group-hover:scale-110 transition-all duration-500"></i>
+                    <div class="sm:w-2/5 h-48 sm:h-auto bg-slate-100 relative overflow-hidden shrink-0 flex items-center justify-center py-6 sm:py-0">
+                        <i class="fas fa-user-md text-6xl text-slate-300 group-hover:text-primary group-hover:scale-110 transition-all duration-500"></i>
                     </div>
                     <div class="p-6 sm:w-3/5 flex flex-col justify-center">
-                        <h3 class="text-xl font-bold text-dark mb-1" data-i18n="doc2-name">Dr. Pavan K. Yadav</h3>
-                        <p class="text-primary font-medium text-sm mb-3" data-i18n="doc2-role">Orthopedic Specialist</p>
+                        <h3 class="text-lg md:text-xl font-bold text-dark mb-1" data-i18n="doc2-name">Dr. Pavan K. Yadav</h3>
+                        <p class="text-primary font-medium text-xs md:text-sm mb-3" data-i18n="doc2-role">Orthopedic Specialist</p>
                         
-                        <div class="inline-block text-xs font-bold text-slate-700 bg-slate-100 px-2 py-1 rounded-md mb-4 w-max">
+                        <div class="inline-block text-[10px] font-bold text-slate-700 bg-slate-100 px-2 py-1 rounded-md mb-4 w-max">
                             D.Ortho., DNB. Ortho
                         </div>
-                        <ul class="space-y-2 text-slate-600 text-sm">
-                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc2-p1">Bone & Joint Specialist</span></li>
-                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc2-p2">Key-Hole Surgery Expert</span></li>
-                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc2-p3">Ex. Senior Resident, BIRRD (Tirupati)</span></li>
+                        <ul class="space-y-2 text-slate-600 text-xs md:text-sm">
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] text-primary mt-2"></i> <span data-i18n="doc2-p1">Bone & Joint Specialist</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] text-primary mt-2"></i> <span data-i18n="doc2-p2">Key-Hole Surgery Expert</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] text-primary mt-2"></i> <span data-i18n="doc2-p3">Ex. Senior Resident, BIRRD (Tirupati)</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Dr. Gudipudi Rajesh -->
                 <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden group flex flex-col sm:flex-row">
-                    <!-- EMPTY ICON PLACEHOLDER -->
-                    <div class="sm:w-2/5 h-64 sm:h-auto bg-slate-100 relative overflow-hidden shrink-0 flex items-center justify-center">
-                        <i class="fas fa-user-md text-7xl text-slate-300 group-hover:text-primary group-hover:scale-110 transition-all duration-500"></i>
+                    <div class="sm:w-2/5 h-48 sm:h-auto bg-slate-100 relative overflow-hidden shrink-0 flex items-center justify-center py-6 sm:py-0">
+                        <i class="fas fa-user-md text-6xl text-slate-300 group-hover:text-primary group-hover:scale-110 transition-all duration-500"></i>
                     </div>
                     <div class="p-6 sm:w-3/5 flex flex-col justify-center">
-                        <h3 class="text-xl font-bold text-dark mb-1" data-i18n="doc3-name">Dr. Gudipudi Rajesh</h3>
-                        <p class="text-primary font-medium text-sm mb-3" data-i18n="doc3-role">ENT Specialist</p>
+                        <h3 class="text-lg md:text-xl font-bold text-dark mb-1" data-i18n="doc3-name">Dr. Gudipudi Rajesh</h3>
+                        <p class="text-primary font-medium text-xs md:text-sm mb-3" data-i18n="doc3-role">ENT Specialist</p>
                         
-                        <div class="inline-block text-xs font-bold text-slate-700 bg-slate-100 px-2 py-1 rounded-md mb-4 w-max">
+                        <div class="inline-block text-[10px] font-bold text-slate-700 bg-slate-100 px-2 py-1 rounded-md mb-4 w-max">
                             D.N.B OTO Rhino Laryngology
                         </div>
-                        <ul class="space-y-2 text-slate-600 text-sm mb-4">
-                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc3-p1">Ear, Nose, Throat Specialist</span></li>
-                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc3-p2">Sinus & Nasal Disorders</span></li>
-                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[8px] text-primary mt-1.5"></i> <span data-i18n="doc3-p3">Laryngeal Procedures</span></li>
+                        <ul class="space-y-2 text-slate-600 text-xs md:text-sm mb-4">
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] text-primary mt-2"></i> <span data-i18n="doc3-p1">Ear, Nose, Throat Specialist</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] text-primary mt-2"></i> <span data-i18n="doc3-p2">Sinus & Nasal Disorders</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] text-primary mt-2"></i> <span data-i18n="doc3-p3">Laryngeal Procedures</span></li>
                         </ul>
-                        <div class="text-xs text-slate-400 font-medium">Reg No: 66325</div>
+                        <div class="text-[10px] text-slate-400 font-medium">Reg No: 66325</div>
                     </div>
                 </div>
             </div>
@@ -247,14 +246,14 @@
     </section>
 
     <!-- Services / Specialities Section -->
-    <section id="services" class="py-24 bg-white relative overflow-hidden">
+    <section id="services" class="py-16 md:py-24 bg-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
         <div class="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 max-w-2xl mx-auto">
                 <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block" data-i18n="dept-sub">Departments</span>
-                <h2 class="text-4xl font-extrabold text-dark mb-4" data-i18n="dept-title">Centers of Excellence</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4" data-i18n="dept-title">Centers of Excellence</h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -263,8 +262,8 @@
                     <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
                         <i class="fas fa-laptop-medical text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-dark mb-3" data-i18n="srv1-title">General & Laparoscopic</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-i18n="srv1-desc">Minimally invasive keyhole surgeries, advanced laser treatments, and general procedures.</p>
+                    <h4 class="text-base md:text-lg font-bold text-dark mb-3" data-i18n="srv1-title">General & Laparoscopic</h4>
+                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4" data-i18n="srv1-desc">Minimally invasive keyhole surgeries, advanced laser treatments, and general procedures.</p>
                 </div>
 
                 <!-- Card 2 -->
@@ -272,8 +271,8 @@
                     <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
                         <i class="fas fa-bone text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-dark mb-3" data-i18n="srv2-title">Orthopedics</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-i18n="srv2-desc">Expert treatment for bone fractures, joint problems, nerve injuries, and key-hole surgeries.</p>
+                    <h4 class="text-base md:text-lg font-bold text-dark mb-3" data-i18n="srv2-title">Orthopedics</h4>
+                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4" data-i18n="srv2-desc">Expert treatment for bone fractures, joint problems, nerve injuries, and key-hole surgeries.</p>
                 </div>
 
                 <!-- Card 3 -->
@@ -281,8 +280,8 @@
                     <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
                         <i class="fas fa-ear-listen text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-dark mb-3" data-i18n="srv3-title">ENT (Ear, Nose, Throat)</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-i18n="srv3-desc">Specialized diagnostic and surgical care for hearing, sinus, nasal, and throat-related ailments.</p>
+                    <h4 class="text-base md:text-lg font-bold text-dark mb-3" data-i18n="srv3-title">ENT (Ear, Nose, Throat)</h4>
+                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4" data-i18n="srv3-desc">Specialized diagnostic and surgical care for hearing, sinus, nasal, and throat-related ailments.</p>
                 </div>
 
                 <!-- Card 4 -->
@@ -290,42 +289,42 @@
                     <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
                         <i class="fas fa-venus text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-dark mb-3" data-i18n="srv4-title">Gynecology</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-i18n="srv4-desc">Comprehensive women's healthcare, maternity services, and advanced gynecological treatments.</p>
+                    <h4 class="text-base md:text-lg font-bold text-dark mb-3" data-i18n="srv4-title">Gynecology</h4>
+                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4" data-i18n="srv4-desc">Comprehensive women's healthcare, maternity services, and advanced gynecological treatments.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Interactive Appointment & Contact Section -->
-    <section id="contact" class="py-24 bg-dark text-white">
+    <section id="contact" class="py-16 md:py-24 bg-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-secondary/40 rounded-3xl border border-white/10 overflow-hidden backdrop-blur-sm">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <!-- Info Side -->
-                    <div class="p-10 lg:p-16 flex flex-col justify-between">
+                    <div class="p-8 lg:p-16 flex flex-col justify-between">
                         <div>
                             <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block" data-i18n="contact-sub">Reach Out</span>
-                            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="contact-title">Schedule Your Visit</h2>
-                            <p class="text-slate-300 mb-10 text-lg" data-i18n="contact-desc">Don't delay your health. Book an appointment today and experience dedicated care tailored to your needs.</p>
+                            <h2 class="text-3xl font-bold mb-6" data-i18n="contact-title">Schedule Your Visit</h2>
+                            <p class="text-slate-300 mb-10 text-base md:text-lg" data-i18n="contact-desc">Don't delay your health. Book an appointment today and experience dedicated care tailored to your needs.</p>
                             
-                            <div class="space-y-8">
+                            <div class="space-y-6 md:space-y-8">
                                 <div class="flex items-start gap-4">
-                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                                        <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                        <i class="fas fa-map-marker-alt text-primary text-lg md:text-xl"></i>
                                     </div>
                                     <div>
-                                        <h5 class="font-semibold text-lg text-white" data-i18n="contact-loc-title">Hospital Location</h5>
-                                        <p class="text-slate-400 mt-1" data-i18n="contact-loc-val">Opp. Sai Baba Theater,<br>Huzurnagar, Telangana - 508 204</p>
+                                        <h5 class="font-semibold text-base md:text-lg text-white" data-i18n="contact-loc-title">Hospital Location</h5>
+                                        <p class="text-slate-400 mt-1 text-sm md:text-base" data-i18n="contact-loc-val">Opp. Sai Baba Theater,<br>Huzurnagar, Telangana - 508 204</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start gap-4">
-                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                                        <i class="fas fa-phone-alt text-primary text-xl"></i>
+                                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                        <i class="fas fa-phone-alt text-primary text-lg md:text-xl"></i>
                                     </div>
                                     <div>
-                                        <h5 class="font-semibold text-lg text-white" data-i18n="contact-ph-title">Contact Number</h5>
-                                        <p class="text-slate-400 mt-1">+91 90006 49818</p>
+                                        <h5 class="font-semibold text-base md:text-lg text-white" data-i18n="contact-ph-title">Contact Number</h5>
+                                        <p class="text-slate-400 mt-1 text-sm md:text-base">+91 90006 49818</p>
                                     </div>
                                 </div>
                             </div>
@@ -333,22 +332,22 @@
                     </div>
                     
                     <!-- Form Side -->
-                    <div class="bg-white p-10 lg:p-16 text-dark">
-                        <h3 class="text-2xl font-bold mb-8" data-i18n="form-title">Book an Appointment</h3>
+                    <div class="bg-white p-8 lg:p-16 text-dark">
+                        <h3 class="text-xl md:text-2xl font-bold mb-8" data-i18n="form-title">Book an Appointment</h3>
                         <form class="space-y-5">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div>
-                                    <label class="block text-sm font-semibold text-slate-700 mb-1" data-i18n="form-name">Full Name</label>
-                                    <input type="text" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="...">
+                                    <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1" data-i18n="form-name">Full Name</label>
+                                    <input type="text" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-sm" placeholder="...">
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-semibold text-slate-700 mb-1" data-i18n="form-phone">Phone Number</label>
-                                    <input type="tel" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="+91 XXXXX XXXXX">
+                                    <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1" data-i18n="form-phone">Phone Number</label>
+                                    <input type="tel" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-sm" placeholder="+91 XXXXX XXXXX">
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-sm font-semibold text-slate-700 mb-1" data-i18n="form-dept">Department Needed</label>
-                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-slate-700">
+                                <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1" data-i18n="form-dept">Department Needed</label>
+                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition text-slate-700 text-sm">
                                     <option data-i18n="opt-select">Select Department</option>
                                     <option data-i18n="srv1-title">General & Laparoscopic</option>
                                     <option data-i18n="srv2-title">Orthopedics</option>
@@ -357,10 +356,10 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-sm font-semibold text-slate-700 mb-1" data-i18n="form-desc">Briefly describe your symptoms</label>
-                                <textarea rows="3" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none"></textarea>
+                                <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1" data-i18n="form-desc">Briefly describe your symptoms</label>
+                                <textarea rows="3" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none text-sm"></textarea>
                             </div>
-                            <button type="button" class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-secondary transition-colors duration-300 shadow-lg mt-4" data-i18n="form-btn">
+                            <button type="button" class="w-full bg-primary text-white font-bold py-3.5 px-6 rounded-lg hover:bg-secondary transition-colors duration-300 shadow-lg mt-4 text-sm md:text-base" data-i18n="form-btn">
                                 Confirm Booking Request
                             </button>
                         </form>
@@ -379,11 +378,11 @@
                         <i class="fas fa-notes-medical text-primary text-2xl"></i>
                         <span class="font-bold text-xl text-white" data-i18n="logo-title">Vishnu Hospital</span>
                     </div>
-                    <p class="text-sm leading-relaxed mb-4" data-i18n="foot-desc">Providing advanced healthcare, general surgery, orthopedics, ENT, and gynecology services to the Huzurnagar community with a commitment to excellence.</p>
+                    <p class="text-xs md:text-sm leading-relaxed mb-4" data-i18n="foot-desc">Providing advanced healthcare, general surgery, orthopedics, ENT, and gynecology services to the Huzurnagar community with a commitment to excellence.</p>
                 </div>
                 <div>
                     <h4 class="text-white font-semibold mb-4" data-i18n="foot-links">Quick Links</h4>
-                    <ul class="space-y-2 text-sm">
+                    <ul class="space-y-2 text-xs md:text-sm">
                         <li><a href="#home" class="hover:text-primary transition" data-i18n="nav-home">Home</a></li>
                         <li><a href="#team" class="hover:text-primary transition" data-i18n="nav-team">Our Team</a></li>
                         <li><a href="#services" class="hover:text-primary transition" data-i18n="nav-services">Departments</a></li>
@@ -392,14 +391,14 @@
                 </div>
                 <div>
                     <h4 class="text-white font-semibold mb-4" data-i18n="contact-ph-title">Contact Info</h4>
-                    <ul class="space-y-2 text-sm">
+                    <ul class="space-y-2 text-xs md:text-sm">
                         <li class="flex items-start gap-2 border-b border-white/10 pb-2"><i class="fas fa-map-marker-alt text-primary mt-1"></i> <span data-i18n="contact-loc-val">Opp. Sai Baba Theater,<br>Huzurnagar - 508 204</span></li>
                         <li class="flex items-center gap-2 border-b border-white/10 py-2"><i class="fas fa-phone-alt text-primary"></i> <span>Cell: 90006 49818</span></li>
                         <li class="flex justify-between text-primary font-semibold pt-1"><span data-i18n="foot-emer">Emergencies</span> <span data-i18n="foot-247">24 / 7 Available</span></li>
                     </ul>
                 </div>
             </div>
-            <div class="text-center text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center text-xs flex flex-col md:flex-row justify-between items-center gap-4">
                 <p>&copy; 2026 <span data-i18n="logo-title">Vishnu Hospital</span>. <span data-i18n="foot-rights">All rights reserved.</span></p>
                 <p data-i18n="foot-place">Huzurnagar, Telangana.</p>
             </div>
@@ -547,20 +546,16 @@
                 'foot-links': 'క్విక్ లింక్స్',
                 'foot-emer': 'అత్యవసర సేవలు',
                 'foot-247': '24/7 అందుబాటులో ఉంటాయి',
-                'foot-rights': 'సర్వ హక్కులు ప్రత్యేకించబడినవి.',
+                'foot-rights': 'サーవ హక్కులు ప్రత్యేకించబడినవి.',
                 'foot-place': 'హుజూర్ నగర్, తెలంగాణ.',
                 'btn-lang': '<i class="fas fa-language text-primary"></i> <span>English</span>'
             }
         };
 
         function toggleLanguage() {
-            // Swap Language
             currentLang = currentLang === 'en' ? 'te' : 'en';
-            
-            // Update button text
             document.getElementById('langBtn').innerHTML = translations[currentLang]['btn-lang'];
             
-            // Update all elements with data-i18n attribute
             const elements = document.querySelectorAll('[data-i18n]');
             elements.forEach(el => {
                 const key = el.getAttribute('data-i18n');
